@@ -1,12 +1,12 @@
 ﻿{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.talentech.io/messages/UserManagement/AccountUsernameChanged-v1.json",
+  "$id": "https://raw.githubusercontent.com/lwinch2006/schemastore/main/src/schemas/json/AccountUsernameChanged-v1.json",
   "title": "Account username changed message format",
   "description": "Message will be sent from Talentech Admin via Service Bus when account username is changed",
   "type": "object",
   "properties": {
     "metadata": {
-      "$ref": "/json/shared/MessageTemplate-v1.json"
+      "$ref": "/schemas/json/shared/MessageTemplate-v1.json"
     },
     "payload": {
       "type": "object",

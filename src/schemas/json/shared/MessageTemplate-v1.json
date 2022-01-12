@@ -1,6 +1,6 @@
 ﻿{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.talentech.io/messages/shared/MessageTemplate-v1.json",
+  "$id": "https://raw.githubusercontent.com/lwinch2006/schemastore/main/src/schemas/json/shared/MessageTemplate-v1.json",
   "title": "Message metadata",
   "description": "Metadata part that is included in all messages that are sent via Service Bus",
   "type": "object",
