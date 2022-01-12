@@ -1,0 +1,50 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.talentech.io/messages/shared/MessageTemplate-v1.json",
+  "title": "Message metadata",
+  "description": "Metadata part that is included in all messages that are sent via Service Bus",
+  "type": "object",
+  "properties": {
+    "messageId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "messageType": {
+      "type": "string"
+    },
+    "correlationId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "tenantId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "schema": {
+      "type": "string",
+      "format": "uri"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "createdAtUtc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sentByUser": {
+      "type": "string",
+      "format": "uuid"
+    }
+  },
+  "required": [
+    "messageId",
+    "messageType",
+    "correlationId",
+    "tenantId",
+    "schema",
+    "version",
+    "createdAtUtc",
+    "sentByUser"
+  ],
+  "additionalProperties": true
+}

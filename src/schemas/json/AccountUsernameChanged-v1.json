@@ -1,0 +1,70 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.talentech.io/messages/UserManagement/AccountUsernameChanged-v1.json",
+  "title": "Account username changed message format",
+  "description": "Message will be sent from Talentech Admin via Service Bus when account username is changed",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "$ref": "/json/shared/MessageTemplate-v1.json"
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "oldUsername": {
+              "type": "string",
+              "format": "email"
+            },
+            "newUsername": {
+              "type": "string",
+              "format": "email"
+            }
+          },
+          "required": [
+            "id",
+            "oldUsername",
+            "newUsername"
+          ],
+          "additionalProperties": true
+        },
+        "tenants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "required": [
+        "account",
+        "tenants"
+      ],
+      "additionalProperties": true
+    }
+  },
+  "required": [
+    "metadata",
+    "payload"
+  ],
+  "additionalProperties": true
+}
