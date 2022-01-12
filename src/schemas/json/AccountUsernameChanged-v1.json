@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "metadata": {
-      "$ref": "/schemas/json/shared/MessageTemplate-v1.json"
+      "$ref": "/lwinch2006/schemastore/main/src/schemas/json/MessageTemplate-v1.json"
     },
     "payload": {
       "type": "object",
